@@ -35,14 +35,7 @@
     <p class="hover-text">Hover over the image</p>
     <p data-testid="currentTimeUTC" id="currentTimeUTC"></p>
 </div>
-<script>
-    function updateTime() {
-        const now = new Date();
-        const utcTime = now.toUTCString();
-        document.getElementById('currentTimeUTC').innerText = utcTime;
-    }
-    updateTime();
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
