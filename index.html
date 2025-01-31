@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="profile-card">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                    <img src="Benimaru Shinmon.jpeg" alt="Profile Picture" data-testid="profilePicture">    
+            </div>
+            <div class="flip-card-back">
+                <h2 data-testid="fullName">Olusi Boluwatife</h2>
+                    <h4 data-testid="jobTitle">Software Engineer</h4>
+                    <p data-testid="shortBio">This is a short bio about myself. Not a lot to see here if we're being honest. <br> Nevertheless, I should make the reader aware that I got into programming becuase i was fascinated with the idea of being able to build literally anything using computers. Outside of this, I enjoy eating, listening to and creating music and anything else you imagine I must enjoy.</p>
+                    <p data-testid="currentLocation">Ibadan, Nigeria</p>
+                    <p data-testid="emailAddress">olusijackson@gmail.com</p>
+                    <div class="social-links" data-testid="socialLinks">
+                        <a href="https://linkedin.com/in/boluwatife-olusi" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/GrimTech" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <!-- <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> -->
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <p class="hover-text">Hover over the image</p>
+    <p data-testid="currentTimeUTC" id="currentTimeUTC"></p>
+</div>
+<script>
+    function updateTime() {
+        const now = new Date();
+        const utcTime = now.toUTCString();
+        document.getElementById('currentTimeUTC').innerText = utcTime;
+    }
+    updateTime();
+</script>
+
+</body>
+</html>
